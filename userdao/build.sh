@@ -17,7 +17,7 @@ echo 'clean : end'
 echo 'compile : start'
 javac -cp $libs -d $DEST_PATH $(find $SRC_PATH -name "*.java")
 echo 'compile : end'
-echo 'buid : start'
+echo 'buid  : start'
 jar cvf $DEST_PATH/userdao.jar $(find $DEST_PATH -name "*.class")
 echo 'buid : end'
 
