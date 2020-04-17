@@ -1,5 +1,9 @@
 package kr.ac.jejunu.user;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class User {
     private Integer id;
     private String name;
@@ -28,4 +32,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }
