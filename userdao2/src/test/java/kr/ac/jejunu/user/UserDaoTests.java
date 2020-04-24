@@ -1,6 +1,10 @@
 package kr.ac.jejunu.user;
 
+import javafx.application.Application;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -12,10 +16,16 @@ import static org.hamcrest.core.Is.is;
 public class UserDaoTests {
     String name="ÇãÁö½Ä";
     String password="1116";
+
+    private  static UserDao userDao;
+
+    @BeforeAll
+    public static void setup(){
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(DaoFactory.class);
+        userDao =applicationContext.getBean("userDao",UserDao.class);
+    }
     @Test
     public void get() throws SQLException, ClassNotFoundException {
-        DaoFactory daoFactory=new DaoFactory();
-        UserDao userDao=daoFactory.getUserDao();
         Integer id=1;
         User user=userDao.get(id);
         assertThat(user.getId(),is(id));
@@ -28,8 +38,6 @@ public class UserDaoTests {
         User user=new User();
         user.setName(name);
         user.setPassword(password);
-        DaoFactory daoFactory=new DaoFactory();
-        UserDao userDao=daoFactory.getUserDao();
         userDao.insert(user);
         assertThat(user.getId(),greaterThan(0));
 
