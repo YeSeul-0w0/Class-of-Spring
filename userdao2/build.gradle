@@ -13,9 +13,10 @@ repositories {
 test {
     useJUnitPlatform()
 }
-ext{
-    springVersion='5.2.5.RELEASE'
+ext {
+    springVersion = '5.2.5.RELEASE'
 }
+
 
 dependencies {
     implementation "org.springframework:spring-core:${springVersion}"
