@@ -52,9 +52,9 @@ public class UserDaoTests {
         user.setPassword(password);
         userDao.insert(user);
 
-        String updatedName="CYS";
+        String updatedName="Ye";
+        String updatedPassword="0513";
         user.setName(updatedName);
-        String updatedPassword="1111";
         user.setPassword(updatedPassword);
 
         userDao.update(user);

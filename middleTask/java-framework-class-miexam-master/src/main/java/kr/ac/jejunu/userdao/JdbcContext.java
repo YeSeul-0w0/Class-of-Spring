@@ -99,7 +99,7 @@ public class JdbcContext {
         }
     }
 
-    User get(String sql, Object[] params) throws SQLException {
+    User get(Object[] params, String sql) throws SQLException {
         StatementStrategy statementStrategy= connection -> {
             PreparedStatement preparedStatement = connection.prepareStatement(
                     sql);
