@@ -19,6 +19,10 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
             <param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
+        <multipart-config>
+            <max-file-size>2097152</max-file-size>
+            <max-request-size>2097152</max-request-size>
+        </multipart-config>
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
