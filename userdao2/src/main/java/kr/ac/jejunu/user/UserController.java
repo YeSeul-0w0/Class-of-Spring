@@ -26,7 +26,7 @@ public class UserController {
     public void exception(){
         throw new RuntimeException("어이쿠!");
     }
-    @RequestMapping(path="/upload",method = RequestMethod.GET) 
+    @RequestMapping(path="/upload",method = RequestMethod.GET)
     public void upload(){
 
     }
