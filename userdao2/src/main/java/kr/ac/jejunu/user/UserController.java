@@ -16,15 +16,9 @@ import java.io.*;
 public class UserController {
     private final UserDao userDao;
 @RequestMapping(path="/user")
-    public View getUser(@RequestParam("id") Integer id){
-       return new RedirectView("/upload");
-    }
-/*
-    @RequestMapping(path = "/user")
     public User getUser(@RequestParam("id") Integer id){
         return userDao.get(id);
     }
-*/
 
     @RequestMapping("/exception")
     public void exception(){
