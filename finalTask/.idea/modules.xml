@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/finalTask.iml" filepath="$PROJECT_DIR$/finalTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userdao2.iml" filepath="$PROJECT_DIR$/.idea/modules/userdao2.iml" group="userdao2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userdao2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/userdao2_main.iml" group="userdao2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/userdao2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/userdao2_test.iml" group="userdao2" />
     </modules>
   </component>
 </project>
