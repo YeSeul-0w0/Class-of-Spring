@@ -1,4 +1,4 @@
-import kr.ac.jejunu.user.PostDao
+import kr.ac.jejunu.user.DAO.PostDao
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.jdbc.datasource.SimpleDriverDataSource
 

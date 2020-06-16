@@ -15,7 +15,7 @@
     <bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <constructor-arg ref="dataSource"/>
     </bean>
-    <bean name="userDao" class="kr.ac.jejunu.postInfo.UserDao">
+    <bean name="userDao" class="kr.ac.jejunu.user.DAO.PostDao">
         <constructor-arg ref="jdbcTemplate"/>
     </bean>
 </beans>

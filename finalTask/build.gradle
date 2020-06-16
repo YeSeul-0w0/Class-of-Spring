@@ -25,6 +25,9 @@ dependencies {
     implementation "org.springframework:spring-context:${springVersion}"
     implementation "org.springframework:spring-jdbc:${springVersion}"
     implementation "org.springframework:spring-webmvc:${springVersion}"
+    implementation 'org.springframework.data:spring-data-jpa:1.5.0.RELEASE'
+    implementation 'org.hibernate:hibernate-core:4.3.1.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:4.3.1.Final'
     implementation "org.codehaus.groovy:groovy:3.0.3"
     runtimeOnly 'mysql:mysql-connector-java:8.0.19'
     testImplementation 'org.hamcrest:hamcrest:2.1'
