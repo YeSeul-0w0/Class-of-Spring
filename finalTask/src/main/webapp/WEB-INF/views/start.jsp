@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="one">
-         <img src="/img/startimg.jpg" alt="시작이미지"/>
+        <a href="http://localhost:8080/post?id=1"><img src="/img/startimg.jpg" alt="시작이미지"/></a>
 
     </div>
 </body>
