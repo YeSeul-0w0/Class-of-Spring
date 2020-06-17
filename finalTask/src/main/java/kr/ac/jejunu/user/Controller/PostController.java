@@ -17,7 +17,7 @@ public class PostController {
     @Autowired
     private PostDao postDao;
 
-@RequestMapping(path="/post")
+    @RequestMapping(path="/post")
     public Post getUser(@RequestParam("id") Integer id){
         return postDao.get(id);
     }
@@ -26,6 +26,15 @@ public class PostController {
     public void exception(){
         throw new RuntimeException("어이쿠!");
     }
+
+    @RequestMapping("/start")
+    public ModelAndView startHtml(){
+        ModelAndView modelAndView=new ModelAndView();
+        modelAndView.addObject("url", "/WEB-INF/static/startimg.jpg");
+        return modelAndView;
+    }
+
+
     @GetMapping("/upload")
     public void upload(){
 
