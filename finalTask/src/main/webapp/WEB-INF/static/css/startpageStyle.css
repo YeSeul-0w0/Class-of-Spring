@@ -2,6 +2,22 @@ body{
     background-color: #eed9d9;
 }
 
+.text {
+    position: absolute;
+    z-index: 20;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.0rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20%);
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+
+
 @media screen and (min-width: 769px) {
     .one{
         position: relative;
@@ -10,6 +26,7 @@ body{
 
     .one img{
         position: absolute;
+        perspective:500px;
         left: 0; top: 0; right:0; bottom:0;
         margin: auto;
         text-align: center;;
@@ -22,9 +39,13 @@ body{
         max-width: 500px;
         max-height: 767px;
     }
+
 }
 
-
+.one img:hover{
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
 
 @media screen and (max-width: 769px)
 {
@@ -45,6 +66,20 @@ body{
         height: auto;
         max-width: 200px;
         max-height: 467px;
+    }
+
+    .text {
+        position: absolute;
+        z-index: 20;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.0rem;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-20%);
+        text-align: center;
+        backface-visibility: hidden;
     }
 }
 
