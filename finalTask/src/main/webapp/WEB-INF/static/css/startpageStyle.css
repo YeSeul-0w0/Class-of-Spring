@@ -1,5 +1,5 @@
 body{
-    background-color: #eed9d9;
+    background-color: #f0e3e3;
 }
 
 .text {
@@ -15,6 +15,7 @@ body{
     text-align: center;
     backface-visibility: hidden;
 }
+
 
 
 
@@ -66,6 +67,41 @@ body{
         height: auto;
         max-width: 200px;
         max-height: 467px;
+    }
+
+    .text {
+        position: absolute;
+        z-index: 20;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.0rem;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-20%);
+        text-align: center;
+        backface-visibility: hidden;
+    }
+}
+@media screen and (max-width: 470px)
+{
+    .one{
+        position: relative;
+        height: 100vh;
+    }
+    .one img{
+        position: absolute;
+        left: 0; top: 0; right:0; bottom:0;
+        margin: auto;
+        text-align: center;;
+        display: inline-block;
+        line-height: 100px;
+        border: 2px solid #cda389;
+        padding: 20px;
+        width: auto;
+        height: auto;
+        max-width: 300px;
+        max-height: 567px;
     }
 
     .text {
