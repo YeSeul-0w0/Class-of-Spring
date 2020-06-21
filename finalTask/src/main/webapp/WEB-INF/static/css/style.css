@@ -47,7 +47,12 @@ section{
 }
 
 .about{
+    margin-top: 15px;
+}
+
+footer{
     margin-top: 10px;
+    border-top: 3px solid #d35794;
 }
 
 @media screen and (max-width: 769px){

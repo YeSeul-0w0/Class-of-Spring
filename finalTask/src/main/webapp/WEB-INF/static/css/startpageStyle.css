@@ -14,6 +14,7 @@ body{
     transform: translateX(-50%) translateY(-20%);
     text-align: center;
     backface-visibility: hidden;
+    text-shadow: -0.5px 0 #e674ad, 0 0.5px #e674ad, 0.5px 0 #e674ad, 0 -0.5px #e674ad;
 }
 
 
@@ -116,6 +117,7 @@ body{
         transform: translateX(-50%) translateY(-20%);
         text-align: center;
         backface-visibility: hidden;
+        text-shadow: -0.3px 0 #e674ad, 0 0.3px #e674ad, 0.3px 0 #e674ad, 0 -0.3px #e674ad;
     }
 }
 

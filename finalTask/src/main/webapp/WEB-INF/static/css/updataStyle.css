@@ -1,0 +1,15 @@
+body{
+    margin:20px;
+    border: 2px solid #cda389;
+    padding: 20px;
+}
+
+#titleText{
+    font-size:30px;
+    margin-bottom: 15px;
+}
+
+#contentText{
+    font-size:30px;
+    margin-bottom: 15px;
+}
