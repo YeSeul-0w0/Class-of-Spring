@@ -8,27 +8,27 @@
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
             crossorigin="anonymous"
     />
-    <link href="/css/updataStyle.css" rel="stylesheet" />
+    <link href="/css/updataStyle.css?after" rel="stylesheet" />
 </head>
 <body>
 <div id="title"> 새로운 일기를 작성해봐요! </div>
-<form class="form-horizontal" action="<c:url value='/update'/>" method="post">
+<form class="form-horizontal" action="/update" method="post">
     <div class="form-group">
         <div class="titleText">Title</div>
-            <input type="text" class="form-control" placeholder="제목" value="${post.title}">
+            <input type="text" name = "title" class="form-control" placeholder="제목" value="${post.title}">
             <div class="blank"></div>
             <div class="NameText">Name & DAY</div>
             <div class="form-inline">
                 <div class="name_day">
-                    <input type="text" class="form-control" placeholder="이름" value="${post.name}"></div>
+                    <input type="text" name="writer" class="form-control" placeholder="이름" value="${post.writer}"></div>
                 <div class="name_day">
-                    <input type="date" class="form-control" placeholder="날짜" value="${post.day}"></div>
+                    <input type="date" name="day" class="form-control" placeholder="날짜" value="${post.day}"></div>
             </div>
     <div class="blank"></div>
 
     <div class="form-group">
         <div id="contentText">CONTENT</div>
-        <input type="text" class="form-control" placeholder="일기내용" value="${post.content}" aria-rowspan="5">
+        <input type="text" name="content" class="form-control" placeholder="일기내용" value="${post.content}" aria-rowspan="5">
     </div>
     <div class="form-group">
             <div id="btn">

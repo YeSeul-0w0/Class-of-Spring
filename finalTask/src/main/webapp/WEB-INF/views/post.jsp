@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Open</title>
-    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/style.css?after" type="text/css" rel="stylesheet" />
 
     <link
             rel="stylesheet"

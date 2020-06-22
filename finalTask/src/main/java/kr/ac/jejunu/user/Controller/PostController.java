@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.util.logging.Logger;
 
 @Controller
 //@RequiredArgsConstructor
@@ -31,11 +32,11 @@ public class PostController {
     }
 
 
-    @RequestMapping(value = "/update",method = RequestMethod.POST)
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update(@ModelAttribute Post post){
         System.out.println(postDao.toString());
         postDao.insert(post);
-        return "start";
+        return "/start";
     }
 
     @RequestMapping("/upload")

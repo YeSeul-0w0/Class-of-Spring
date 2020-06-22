@@ -41,7 +41,7 @@ public class PostDao {
 
     public void insert(Post post) {
         Object[] params=new Object[]{post.getTitle(), post.getContent(), post.getDay(), post.getWriter()};
-        String sql="insert into info (title,content,day,writer) values (?,?)";
+        String sql="insert into info (title,content,day,writer) values (?,?,?,?)";
         KeyHolder keyHolder=new GeneratedKeyHolder();
         jdbcTemplate.update(con -> {
             PreparedStatement preparedStatement = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
