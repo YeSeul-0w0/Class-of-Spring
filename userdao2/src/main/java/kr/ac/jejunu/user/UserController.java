@@ -17,17 +17,19 @@ public class UserController {
     private final UserDao userDao;
 @RequestMapping(path="/user")
     public User getUser(@RequestParam("id") Integer id){
-        return userDao.get(id);
+        return userDao.findById(id).get();
     }
 
     @RequestMapping("/exception")
     public void exception(){
         throw new RuntimeException("어이쿠!");
     }
+
     @GetMapping("/upload")
     public void upload(){
 
     }
+
     @PostMapping("/upload")
     public ModelAndView upload(@RequestParam("file")MultipartFile file, HttpServletRequest request) throws IOException {
         File path = new File(request.getServletContext().getRealPath("/")+"/WEB-INF/static/"+file.getOriginalFilename());

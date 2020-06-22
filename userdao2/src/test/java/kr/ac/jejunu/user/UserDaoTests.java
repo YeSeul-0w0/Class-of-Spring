@@ -30,7 +30,7 @@ public class UserDaoTests {
 //        ApplicationContext applicationContext=new GenericGroovyApplicationContext("daoFoactory.groovy");
         userDao =applicationContext.getBean("userDao",UserDao.class);
     }
-    @Test
+/*    @Test
     public void get() throws SQLException, ClassNotFoundException {
         Integer id=1;
         User user=userDao.get(id);
@@ -83,6 +83,6 @@ public class UserDaoTests {
         User deleteUser=userDao.get(user.getId());
 
         assertThat(deleteUser, IsNull.nullValue());
-    }
+    }*/
 
 }
