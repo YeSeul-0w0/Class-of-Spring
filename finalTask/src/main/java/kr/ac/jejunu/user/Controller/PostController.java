@@ -22,10 +22,6 @@ public class PostController {
         return postDao.get(id);
     }
 
-    @RequestMapping("/exception")
-    public void exception(){
-        throw new RuntimeException("어이쿠!");
-    }
 
     @RequestMapping("/start")
     public ModelAndView startHtml(){
@@ -33,15 +29,18 @@ public class PostController {
         modelAndView.addObject("url", "/WEB-INF/static/startimg.jpg");
         return modelAndView;
     }
-    @RequestMapping(value = "/upload",method = RequestMethod.GET)
-    public String upload(@ModelAttribute Post post){
+
+
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
+    public String update(@ModelAttribute Post post){
         System.out.println(postDao.toString());
         postDao.insert(post);
-        return "redirect:/post?id=1";
+        return "start";
     }
 
-    public void update(@RequestBody Post post) {
-        postDao.update(post);
+    @RequestMapping("/upload")
+    public void upload() {
+
     }
 
 }

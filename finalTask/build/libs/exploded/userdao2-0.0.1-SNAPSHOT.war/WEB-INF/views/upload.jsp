@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="title"> 새로운 일기를 작성해봐요! </div>
-<form class="form-horizontal">
+<form class="form-horizontal" action="<c:url value='/update'/>" method="get">
     <div class="form-group">
         <div class="titleText">Title</div>
             <input type="text" class="form-control" placeholder="제목" value="${post.title}">

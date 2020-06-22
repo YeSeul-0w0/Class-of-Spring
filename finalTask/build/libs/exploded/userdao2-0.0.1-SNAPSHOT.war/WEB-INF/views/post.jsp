@@ -24,10 +24,10 @@
     <section>
         <div class="date_writer">
             <div class="date">
-                ${post.day}
+                날짜 : ${post.day}
             </div>
             <div class="writer">
-                ${post.writer}
+                작성자 : ${post.writer}
             </div>
         </div>
         <div class="about">
