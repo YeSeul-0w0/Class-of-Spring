@@ -33,9 +33,11 @@ public class PostController {
         modelAndView.addObject("url", "/WEB-INF/static/startimg.jpg");
         return modelAndView;
     }
-    @RequestMapping("/upload")
-    public void upload(){
-
+    @RequestMapping(value = "/upload",method = RequestMethod.GET)
+    public String upload(@ModelAttribute Post post){
+        System.out.println(postDao.toString());
+        postDao.insert(post);
+        return "redirect:/post?id=1";
     }
 
     public void update(@RequestBody Post post) {

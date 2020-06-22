@@ -22,8 +22,13 @@
     </header>
 
     <section>
-        <div class="date">
-            ${post.day}
+        <div class="date_writer">
+            <div class="date">
+                날짜 : ${post.day}
+            </div>
+            <div class="writer">
+                작성자 : ${post.writer}
+            </div>
         </div>
         <div class="about">
             ${post.content}
@@ -33,7 +38,7 @@
 
     <footer>
        <div class="btn">
-           <a href="http://localhost:8080/upload"></a> <button type="button" class="btn btn-default btn-lg btn-block">NEW DIARY SUBMIT</button>
+          <button type="button" class="btn btn-default btn-lg btn-block" onclick="location.href='http://localhost:8080/upload'">NEW DIARY SUBMIT</button>
        </div>
 
     </footer>

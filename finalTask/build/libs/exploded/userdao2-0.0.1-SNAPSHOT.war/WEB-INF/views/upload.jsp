@@ -11,21 +11,30 @@
     <link href="/css/updataStyle.css" rel="stylesheet" />
 </head>
 <body>
+<div id="title"> 새로운 일기를 작성해봐요! </div>
 <form class="form-horizontal">
     <div class="form-group">
-        <div id="titleText">Title</div>
-        <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="title">
-        </div>
+        <div class="titleText">Title</div>
+            <input type="text" class="form-control" placeholder="제목" value="${post.title}">
+            <div class="blank"></div>
+            <div class="NameText">Name & DAY</div>
+            <div class="form-inline">
+                <div class="name_day">
+                    <input type="text" class="form-control" placeholder="이름" value="${post.name}"></div>
+                <div class="name_day">
+                    <input type="date" class="form-control" placeholder="날짜" value="${post.day}"></div>
+            </div>
+    <div class="blank"></div>
+
+    <div class="form-group">
+        <div id="contentText">CONTENT</div>
+        <input type="text" class="form-control" placeholder="일기내용" value="${post.content}" aria-rowspan="5">
     </div>
     <div class="form-group">
-        <div id="contentText">내용</div>
-        <textarea class="form-control" rows="5"></textarea>
+            <div id="btn">
+            <button type="submit" class="btn btn-default">등록</button>
+            </div>
     </div>
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Sign in</button>
-        </div>
     </div>
 </form>
 </body>
