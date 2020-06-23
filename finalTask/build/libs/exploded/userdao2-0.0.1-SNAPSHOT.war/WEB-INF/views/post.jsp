@@ -32,6 +32,7 @@
     <footer>
        <div class="btn">
           <button type="button" class=btn2 onclick="location.href='http://localhost:8080/upload'">NEW DIARY SUBMIT</button>
+           <button type="button" class=btn2 value="id" onclick="location.href='http://localhost:8080/post/next?id=${id}'">NEXT DIARY</button>
        </div>
 
     </footer>

@@ -34,9 +34,10 @@ public class PostController {
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update(@ModelAttribute Post post){
-        System.out.println(postDao.toString());
         postDao.insert(post);
-        return "/start";
+        Integer id=post.getId();
+        System.out.println("id: "+id);
+        return "redirect:/post?id="+id;
     }
 
     @RequestMapping("/upload")
