@@ -32,7 +32,7 @@
     </div>
     <div class="form-group">
             <div id="btn">
-            <button type="submit" class="btn btn-default">등록</button>
+            <button type="submit" class="btn btn-info">등록</button>
             </div>
     </div>
     </div>
