@@ -20,6 +20,9 @@ public class PostController {
 
     @RequestMapping(path="/post")
     public Post getUser(@RequestParam("id") Integer id){
+        if(id<=0){
+            id=1;
+        }
         return postDao.get(id);
     }
 
