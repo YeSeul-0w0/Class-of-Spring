@@ -35,5 +35,6 @@ public class UserServlet extends GenericServlet {
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         System.out.println("******* service ********");
 
+
     }
 }

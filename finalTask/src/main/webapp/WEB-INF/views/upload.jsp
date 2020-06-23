@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <html>
 <head>
     <title>NEW_DIARY</title>
@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="title"> 새로운 일기를 작성해봐요! </div>
-<form class="form-horizontal" action="/update" method="post">
+<form class="form-horizontal" action="/update" method="post"  accept-charset="utf-8">
     <div class="form-group">
         <div class="titleText">Title</div>
             <input type="text" name = "title" class="form-control" placeholder="제목" value="${post.title}">
