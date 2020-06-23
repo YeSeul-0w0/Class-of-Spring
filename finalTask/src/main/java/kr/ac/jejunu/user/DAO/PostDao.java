@@ -39,6 +39,17 @@ public class PostDao {
         });
     }
 
+    public Integer count(){
+        String sql="select count(*) as num from info";
+        return jdbcTemplate.query(sql,new Object[]{}, rs ->{
+            Integer countCol = null;
+            if(rs.next()){
+                countCol=rs.getInt("num");
+            }
+            return countCol;
+        });
+    }
+
     public void insert(Post post) {
         Object[] params=new Object[]{post.getTitle(), post.getContent(), post.getDay(), post.getWriter()};
         String sql="insert into info (title,content,day,writer) values (?,?,?,?)";

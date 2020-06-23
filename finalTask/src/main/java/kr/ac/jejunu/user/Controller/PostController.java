@@ -18,29 +18,32 @@ public class PostController {
     @Autowired
     private PostDao postDao;
 
-    @RequestMapping(path="/post")
-    public Post getUser(@RequestParam("id") Integer id){
-        if(id<=0){
-            id=1;
+    @RequestMapping(path = "/post")
+    public Post getUser(@RequestParam("id") Integer id) {
+        if (id <= 0) {
+            id = 1;
+        }
+        if (id > postDao.count()) {
+            id = postDao.count();
         }
         return postDao.get(id);
     }
 
 
     @RequestMapping("/start")
-    public ModelAndView startHtml(){
-        ModelAndView modelAndView=new ModelAndView();
+    public ModelAndView startHtml() {
+        ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("url", "/WEB-INF/static/startimg.jpg");
         return modelAndView;
     }
 
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public String update(@ModelAttribute Post post){
+    public String update(@ModelAttribute Post post) {
         postDao.insert(post);
-        Integer id=post.getId();
-        System.out.println("id: "+id);
-        return "redirect:/post?id="+id;
+        Integer id = post.getId();
+        System.out.println("id: " + id);
+        return "redirect:/post?id=" + id;
     }
 
     @RequestMapping("/upload")

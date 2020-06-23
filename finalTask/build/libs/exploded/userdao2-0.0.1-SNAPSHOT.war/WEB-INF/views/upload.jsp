@@ -28,7 +28,7 @@
 
     <div class="form-group">
         <div id="contentText">CONTENT</div>
-        <input type="text" name="content" class="form-control" placeholder="일기내용" value="${post.content}" aria-rowspan="5">
+        <input type="text" style="width:100%; height:50px; letter-spacing: -5px;" name="content" class="form-control" placeholder="일기내용" value="${post.content}" aria-rowspan="5">
     </div>
     <div class="form-group">
             <div id="btn">
