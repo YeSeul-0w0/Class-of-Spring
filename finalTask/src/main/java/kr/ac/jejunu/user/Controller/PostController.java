@@ -4,6 +4,7 @@ import kr.ac.jejunu.user.DTO.Post;
 import kr.ac.jejunu.user.DAO.PostDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -49,6 +50,11 @@ public class PostController {
     @RequestMapping("/upload")
     public void upload() {
 
+    }
+
+    @RequestMapping(path = "/modify")
+    public Post modify(@RequestParam("id") Integer id) {
+        return postDao.get(id);
     }
 
 }

@@ -29,7 +29,7 @@
 
     </div>
     <div class="btn">
-        <button type="button" class="modify_delete" value="id">MODIFY</button>
+        <button type="button" class="modify_delete" value="id"  onclick="location.href='http://localhost:8080/modify?id=${post.id}'"/>MODIFY</button>
         <button type="button" class="modify_delete" value="id">DELETE</button>
     </div>
 </section>
