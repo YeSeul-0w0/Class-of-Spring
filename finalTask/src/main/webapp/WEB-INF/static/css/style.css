@@ -137,6 +137,13 @@ footer{
         font-size: 15px;
         margin-right: 30px;
     }
+    .modify_delete:hover{
+        color:#cd3b83;
+        border:2px solid #cd3b83;
+        font-size:15px;
+        font-weight: bold;
+        background-color:#d6eefc;
+    }
 }
 
 @media screen and (max-width: 769px){
