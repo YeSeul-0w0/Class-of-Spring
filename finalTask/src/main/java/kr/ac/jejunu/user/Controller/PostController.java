@@ -24,8 +24,9 @@ public class PostController {
         if (id <= 0) {
             id = 1;
         }
-        if (id > postDao.count()) {
+        if (id >= postDao.count()) {
             id = postDao.count();
+            System.out.println(id);
         }
         return postDao.get(id);
     }
@@ -52,9 +53,19 @@ public class PostController {
 
     }
 
+
+
     @RequestMapping(path = "/modify")
     public Post modify(@RequestParam("id") Integer id) {
         return postDao.get(id);
+    }
+
+    @RequestMapping(value = "/modify", method = RequestMethod.POST)
+    public String modifyPost(@ModelAttribute Post post) {
+        postDao.update(post);
+        Integer id = post.getId();
+        System.out.println("id: " + id);
+        return "redirect:/post?id=" + id;
     }
 
 }
