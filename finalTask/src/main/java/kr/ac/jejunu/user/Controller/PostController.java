@@ -26,7 +26,6 @@ public class PostController {
         }
         if (id >= postDao.count()) {
             id = postDao.count();
-            System.out.println(id);
         }
         return postDao.get(id);
     }
@@ -40,11 +39,10 @@ public class PostController {
     }
 
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @RequestMapping(value = "/update",  method = RequestMethod.POST)
     public String update(@ModelAttribute Post post) {
         postDao.insert(post);
         Integer id = post.getId();
-        System.out.println("id: " + id);
         return "redirect:/post?id=" + id;
     }
 
@@ -62,9 +60,9 @@ public class PostController {
 
     @RequestMapping(value = "/modify", method = RequestMethod.POST)
     public String modifyPost(@ModelAttribute Post post) {
+        System.out.println(post.getId());
         postDao.update(post);
         Integer id = post.getId();
-        System.out.println("id: " + id);
         return "redirect:/post?id=" + id;
     }
 

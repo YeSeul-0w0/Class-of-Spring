@@ -65,8 +65,8 @@ public class PostDao {
     }
 
     public void update(Post post)  {
-        Object[] params=new Object[]{post.getTitle(), post.getContent(), post.getId(), post.getDay(), post.getWriter()};
-        String sql = "update info set day= ?, title= ? content=? writer=? where id = ?";
+        Object[] params=new Object[]{post.getTitle(), post.getContent(), post.getDay(), post.getWriter(),post.getId()};
+        String sql = "update info set title= ?, content= ?, day=?, writer=? where id =?";
         jdbcTemplate.update(sql, params);
     }
 

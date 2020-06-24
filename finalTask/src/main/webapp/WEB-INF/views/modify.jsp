@@ -12,7 +12,8 @@
 </head>
 <body>
 <div id="title"> 일기를 수정해보자! </div>
-<form class="form-horizontal" action="/update" method="post"  accept-charset="utf-8">
+<form class="form-horizontal" action="/modify" method="post"  accept-charset="utf-8">
+    <input type="hidden" name="id" value="${post.id}">
     <div class="form-group">
         <div class="titleText">Title</div>
             <input type="text" name = "title" class="form-control" placeholder="제목" value="${post.title}">
