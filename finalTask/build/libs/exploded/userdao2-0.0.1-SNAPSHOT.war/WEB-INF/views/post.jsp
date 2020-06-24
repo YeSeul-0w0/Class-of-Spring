@@ -26,8 +26,12 @@
     </div>
     <div class="about">
         ${post.content}
-    </div>
 
+    </div>
+    <div class="btn">
+        <button type="button" class="modify_delete" value="id">MODIFY</button>
+        <button type="button" class="modify_delete" value="id">DELETE</button>
+    </div>
 </section>
 
 <footer>

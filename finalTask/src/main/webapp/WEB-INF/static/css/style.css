@@ -49,6 +49,25 @@ section{
     float: right;
  }
 
+.modify_delete{
+    text-align: center;
+    padding: 15px 40px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    background-color:#f0e3e3;
+    border:1px Dashed #d78bcf;
+    font-size: 15px;
+    margin-right: 60px;
+}
+
+.modify_delete:hover{
+    color:#cd3b83;
+    border:2px solid #cd3b83;
+    font-size:15px;
+    font-weight: bold;
+    background-color:#d6eefc;
+}
+
 .writer{
     text-size:10px;
     color:#b59a9a;
@@ -63,13 +82,13 @@ section{
 footer{
     margin-top: 10px;
     border-top: 3px solid #d35794;
-    text-align: center;
     padding: 20px
 }
 
 .btn{
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .btn2{
@@ -88,6 +107,36 @@ footer{
     font-size:15px;
     font-weight: bold;
     background-color:#fff;
+}
+
+@media screen and (max-width: 820px){
+    .btn2{
+        padding: 15px 15px;
+        margin:15px 2px;
+        background-color:#f0e3e3;
+        font-size:15px;
+        font-family: sans-serif;
+        text-align: center;
+        border:1px Dashed #d78bcf
+    }
+
+    .btn2:hover{
+        color:#d35794;
+        border:2px solid #d35794;
+        font-size:15px;
+        font-weight: bold;
+        background-color:#fff;
+    }
+    .modify_delete{
+        text-align: center;
+        padding: 15px 20px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+        background-color:#f0e3e3;
+        border:1px Dashed #d78bcf;
+        font-size: 15px;
+        margin-right: 30px;
+    }
 }
 
 @media screen and (max-width: 769px){
